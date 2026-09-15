@@ -1,0 +1,871 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hosni Zaaraoui · Junior SysAdmin &amp; Security</title>
+    <meta
+      name="description"
+      content="Junior System Administrator · Linux, networking, automation, virtualization, security."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== TOP BAR (status bar) ===== -->
+    <div class="topbar">
+      <div class="topbar-left">
+        <span class="ws-tag">1</span>
+        <span class="ws-sep">|</span>
+        <span class="topbar-title">hosni@me</span>
+        <span class="topbar-sep">:</span>
+        <span class="topbar-path">~/portfolio</span>
+      </div>
+      <div class="topbar-right">
+        <span class="status-pill" id="themeLabel">DRK</span>
+        <span class="status-pill">LAN</span>
+        <span class="status-pill battery">◉ 92%</span>
+        <span class="clock" id="clock">--:--</span>
+      </div>
+    </div>
+
+    <!-- ===== SIDEBAR DOCK (desktop) ===== -->
+    <aside class="dock" id="dock">
+      <div class="dock-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">HZ</span>
+      </div>
+
+      <nav class="dock-nav">
+        <a href="#home" class="dock-link active" data-ws="1" aria-label="Home">
+          <span class="dock-icon">⌂</span><span class="dock-label">Home</span>
+        </a>
+        <a href="#about" class="dock-link" data-ws="2" aria-label="About">
+          <span class="dock-icon">◇</span><span class="dock-label">About</span>
+        </a>
+        <a href="#skills" class="dock-link" data-ws="3" aria-label="Skills">
+          <span class="dock-icon">◐</span><span class="dock-label">Skills</span>
+        </a>
+        <a href="#projects" class="dock-link" data-ws="4" aria-label="Projects">
+          <span class="dock-icon">◈</span
+          ><span class="dock-label">Projects</span>
+        </a>
+        <a
+          href="#documents"
+          class="dock-link"
+          data-ws="5"
+          aria-label="Documents"
+        >
+          <span class="dock-icon">▤</span><span class="dock-label">Docs</span>
+        </a>
+        <a href="#labs" class="dock-link" data-ws="6" aria-label="Labs">
+          <span class="dock-icon">⚙</span><span class="dock-label">Labs</span>
+        </a>
+
+        <a
+          href="#experience"
+          class="dock-link"
+          data-ws="7"
+          aria-label="Experience"
+        >
+          <span class="dock-icon">▤</span><span class="dock-label">Exp</span>
+        </a>
+        <a
+          href="#education"
+          class="dock-link"
+          data-ws="8"
+          aria-label="Education"
+        >
+          <span class="dock-icon">✎</span><span class="dock-label">Edu</span>
+        </a>
+        <a
+          href="#certifications"
+          class="dock-link"
+          data-ws="9"
+          aria-label="Certifications"
+        >
+          <span class="dock-icon">✦</span><span class="dock-label">Cert</span>
+        </a>
+        <a href="#github" class="dock-link" data-ws="10" aria-label="GitHub">
+          <span class="dock-icon">⎇</span><span class="dock-label">Git</span>
+        </a>
+        <a href="#contact" class="dock-link" data-ws="11" aria-label="Contact">
+          <span class="dock-icon">✉</span
+          ><span class="dock-label">Contact</span>
+        </a>
+      </nav>
+
+      <div class="dock-foot">
+        <button class="dock-btn" id="themeToggle" aria-label="Toggle theme">
+          🌙
+        </button>
+        <a
+          class="dock-btn"
+          href="https://github.com/hosnizaaraoui"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+          >⎇</a
+        >
+      </div>
+    </aside>
+
+    <!-- ===== MOBILE HEADER ===== -->
+    <header class="mobile-header">
+      <div class="mobile-brand">
+        <span class="brand-dot"></span>
+        <span class="mono">hosni@me:~/portfolio</span>
+      </div>
+      <button
+        class="hamburger"
+        id="hamburger"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <!-- Mobile nav drawer -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#home" class="mobile-link active">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#skills" class="mobile-link">Skills</a>
+      <a href="#projects" class="mobile-link">Projects</a>
+      <a href="#documents" class="mobile-link">Documents</a>
+      <a href="#labs" class="mobile-link">Labs</a>
+      <a href="#experience" class="mobile-link">Experience</a>
+      <a href="#education" class="mobile-link">Education</a>
+      <a href="#certifications" class="mobile-link">Certifications</a>
+      <a href="#github" class="mobile-link">GitHub</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="main">
+      <!-- ===== HERO ===== -->
+      <section class="hero" id="home">
+        <div class="window">
+          <div class="window-bar">
+            <div class="window-dots">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+            </div>
+            <span class="window-title mono">~/hero — zsh</span>
+            <span class="window-bar-spacer"></span>
+          </div>
+          <div class="window-body hero-body">
+            <p class="prompt mono">
+              <span class="prompt-user">hosni@me</span
+              ><span class="prompt-colon">:</span
+              ><span class="prompt-path">~</span
+              ><span class="prompt-sym">$</span> whoami
+            </p>
+            <h1 class="hero-name">Hosni Zaaraoui</h1>
+            <p class="hero-sub mono">
+              Junior System Administrator <span class="sep">|</span> Networking
+              &amp; Security Enthusiast
+            </p>
+            <p class="hero-desc">
+              I build, automate, and troubleshoot IT infrastructure with a focus
+              on Linux administration, networking, virtualization, and
+              cybersecurity.
+            </p>
+            <div class="hero-buttons">
+              <a href="#projects" class="btn btn-primary mono"
+                >→ view projects</a
+              >
+              <a
+                href="assets/CV_Hosni_vFR.pdf"
+                class="btn btn-outline mono"
+                id="downloadCV"
+                >↓ download cv</a
+              >
+            </div>
+            <div class="hero-social mono">
+              <a
+                href="https://github.com/hosnizaaraoui"
+                target="_blank"
+                rel="noopener"
+                >[github]</a
+              >
+              <a
+                href="https://linkedin.com/in/hosni-zaaraoui"
+                target="_blank"
+                rel="noopener"
+                >[linkedin]</a
+              >
+              <a href="mailto:hosnyzaaraoui@gmail.com">[email]</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== ABOUT ===== -->
+      <section class="section" id="about">
+        <div class="section-head">
+          <span class="ws-number mono">2</span>
+          <h2 class="section-title mono">About Me</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="about-grid reveal">
+          <div class="window">
+            <div class="window-bar">
+              <span class="window-title mono">~/about.md</span>
+            </div>
+            <div class="window-body">
+              <p>
+                I am an IT graduate with a strong interest in system
+                administration, networking, infrastructure automation, and
+                cybersecurity.
+              </p>
+              <p>
+                My learning approach is highly practical: I build labs,
+                configure services, troubleshoot failures, automate repetitive
+                tasks, and turn what I learn into small tools and projects.
+              </p>
+              <p>
+                My main technical interests are Linux and Windows
+                administration, network infrastructure, virtualization,
+                monitoring, automation, and security operations.
+              </p>
+              <p>
+                I am currently developing my skills toward a career in system
+                administration and security, with a particular interest in
+                security monitoring and defensive infrastructure.
+              </p>
+            </div>
+          </div>
+
+          <div class="window">
+            <div class="window-bar">
+              <span class="window-title mono">~/learning.toml</span>
+            </div>
+            <div class="window-body">
+              <p class="mono muted" style="margin-bottom: 12px">
+                # currently_learning = [
+              </p>
+              <div class="learning-tags">
+                <span>"Python automation"</span>
+                <span>"Linux administration"</span>
+                <span>"Windows Server"</span>
+                <span>"Ansible"</span>
+                <span>"SIEM / Security Monitoring"</span>
+                <span>"Web Application Security"</span>
+              </div>
+              <p class="mono muted" style="margin-top: 12px"># ]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== SKILLS ===== -->
+      <section class="section" id="skills">
+        <div class="section-head">
+          <span class="ws-number mono">3</span>
+          <h2 class="section-title mono">What I Work With</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub mono">
+          // technologies used in labs &amp; projects
+        </p>
+        <div class="tech-grid reveal">
+          <div class="tech-card">
+            <div class="tech-card-head mono">
+              <span>01</span> Systems Administration
+            </div>
+            <div class="tags">
+              <span>Linux</span><span>Ubuntu</span><span>Debian</span
+              ><span>CentOS</span> <span>Windows Server</span><span>SSH</span
+              ><span>Monitoring</span><span>Backup</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-head mono"><span>02</span> Networking</div>
+            <div class="tags">
+              <span>TCP/IP</span><span>VLANs</span><span>Routing</span
+              ><span>VPN</span> <span>DNS</span><span>DHCP</span
+              ><span>pfSense</span><span>GNS3</span><span>Packet Tracer</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-head mono">
+              <span>03</span> Virtualization
+            </div>
+            <div class="tags">
+              <span>Proxmox</span><span>VMware</span><span>VirtualBox</span
+              ><span>Docker</span> <span>High Availability</span
+              ><span>VMs</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-head mono"><span>04</span> Automation</div>
+            <div class="tags">
+              <span>Python</span><span>Bash</span><span>Ansible</span
+              ><span>Git</span><span>REST APIs</span>
+            </div>
+          </div>
+          <div class="tech-card">
+            <div class="tech-card-head mono">
+              <span>05</span> Security &amp; Monitoring
+            </div>
+            <div class="tags">
+              <span>Graylog</span><span>Rsyslog</span><span>Suricata</span
+              ><span>Zabbix</span> <span>Nagios</span><span>SIEM</span
+              ><span>Monitoring</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PROJECTS ===== -->
+      <section class="section" id="projects">
+        <div class="section-head">
+          <span class="ws-number mono">4</span>
+          <h2 class="section-title mono">Featured Projects</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub mono">
+          // built to solve practical admin, infra &amp; security problems
+        </p>
+
+        <div class="projects-grid reveal" id="projectsGrid">
+          <!-- project cards injected by script.js -->
+        </div>
+      </section>
+
+      <!-- ===== DOCUMENTS ===== -->
+      <!-- ===== DOCUMENTS ===== -->
+      <section class="section" id="documents">
+        <div class="section-head">
+          <span class="ws-number mono">5</span>
+          <h2 class="section-title mono">Documents &amp; Writing</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub mono">// reports, lab write-ups &amp; posts</p>
+
+        <div class="docs-toolbar mono">
+          <div class="docs-search">
+            <span class="docs-search-icon">⌕</span>
+            <input
+              type="search"
+              id="docsSearch"
+              class="mono"
+              placeholder="search title, description, type…"
+              autocomplete="off"
+              spellcheck="false"
+              aria-label="Search documents"
+            />
+            <button
+              class="docs-search-clear"
+              id="docsSearchClear"
+              aria-label="Clear search"
+              hidden
+            >
+              ✕
+            </button>
+          </div>
+          <div class="docs-count mono" id="docsCount">40 docs</div>
+        </div>
+
+        <div class="docs-filter mono" id="docsFilter">
+          <button class="filter-btn active" data-filter="all">all</button>
+          <button class="filter-btn" data-filter="report">reports</button>
+          <button class="filter-btn" data-filter="lab">labs</button>
+          <button class="filter-btn" data-filter="linkedin">linkedin</button>
+          <button class="filter-btn" data-filter="writeup">writeups</button>
+        </div>
+
+        <div class="docs-filter mono" id="docsLangFilter">
+          <button class="filter-btn active" data-lang="all">all langs</button>
+          <button class="filter-btn" data-lang="en">en</button>
+          <button class="filter-btn" data-lang="fr">fr</button>
+          <button class="filter-btn" data-lang="tn">tn</button>
+        </div>
+
+        <div class="docs-scroll" id="docsScroll">
+          <div class="docs-grid reveal" id="docsGrid">
+            <!-- injected by script.js -->
+          </div>
+          <p class="docs-empty mono" id="docsEmpty" hidden>
+            // no documents match your filters
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== LABS ===== -->
+      <section class="section" id="labs">
+        <div class="section-head">
+          <span class="ws-number mono">5</span>
+          <h2 class="section-title mono">Infrastructure Labs</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub mono">
+          // hands-on labs to understand how real infra behaves &amp; fails
+        </p>
+
+        <div class="labs-grid reveal">
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">01</span>
+              <h3>Proxmox High Availability Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Built a Proxmox cluster with multiple VMs to explore
+                virtualization, clustering, and high availability.
+              </p>
+              <div class="tags">
+                <span>Proxmox</span><span>VMs</span><span>HA</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">02</span>
+              <h3>Network Infrastructure Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Multi-VLAN network environment in GNS3 + pfSense, including
+                segmentation, VPN, VoIP, and management networks.
+              </p>
+              <div class="tags">
+                <span>GNS3</span><span>pfSense</span><span>VLANs</span
+                ><span>VPN</span><span>VoIP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">03</span>
+              <h3>Linux Security Monitoring Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Monitoring pipeline where Suricata events were transported
+                through rsyslog and visualized in Graylog.
+              </p>
+              <div class="arch-badge mono">Suricata → rsyslog → Graylog</div>
+              <div class="tags">
+                <span>Ubuntu</span><span>Suricata</span><span>rsyslog</span
+                ><span>Graylog</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">04</span>
+              <h3>DNS / BIND9 Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Configured BIND9 for internal DNS resolution, zone transfers,
+                and forward/reverse lookup management.
+              </p>
+              <div class="tags">
+                <span>BIND9</span><span>DNS</span><span>Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">05</span>
+              <h3>Apache Web Server Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Deployed and hardened Apache on Linux: virtual hosts, SSL/TLS,
+                and access controls.
+              </p>
+              <div class="tags">
+                <span>Apache</span><span>SSL/TLS</span><span>Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">06</span>
+              <h3>SSH Hardening Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Key-based auth, disabled password login, fail2ban, and SSH
+                access auditing.
+              </p>
+              <div class="tags">
+                <span>SSH</span><span>fail2ban</span><span>Linux</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">07</span>
+              <h3>Windows Server Administration Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                Active Directory, DNS, DHCP, Group Policy, and basic Windows
+                Server roles in a lab environment.
+              </p>
+              <div class="tags">
+                <span>Windows Server</span><span>AD</span><span>GPO</span
+                ><span>DNS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-card">
+            <div
+              class="lab-header"
+              tabindex="0"
+              role="button"
+              aria-expanded="false"
+            >
+              <span class="lab-idx mono">08</span>
+              <h3>Linux Admin &amp; Backup Lab</h3>
+              <span class="chevron mono">[+]</span>
+            </div>
+            <div class="lab-body">
+              <p>
+                User management, systemd, cron jobs, rsync backups, and system
+                maintenance routines.
+              </p>
+              <div class="tags">
+                <span>Linux</span><span>systemd</span><span>rsync</span
+                ><span>cron</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EXPERIENCE ===== -->
+      <section class="section" id="experience">
+        <div class="section-head">
+          <span class="ws-number mono">6</span>
+          <h2 class="section-title mono">Experience</h2>
+          <span class="section-line"></span>
+        </div>
+        <p class="section-sub mono">// academic &amp; internship experience</p>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="timeline-marker mono">2025</div>
+            <div class="timeline-content">
+              <h3>PFE Internship — Ouerkema Innovation</h3>
+              <div class="meta mono">Medenine, Tunisia</div>
+              <p>
+                Final-year project internship focused on developing and applying
+                practical IT infrastructure and automation skills.
+              </p>
+              <p class="placeholder">
+                [ Exact PFE project description to be added ]
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker mono">2024</div>
+            <div class="timeline-content">
+              <h3>Advanced Internship — Detatec</h3>
+              <div class="meta mono">Sousse, Tunisia</div>
+              <p>
+                Practical network and virtualization environments: GNS3, VMware,
+                pfSense, VMs, firewall config, troubleshooting.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-marker mono">Jan 2023</div>
+            <div class="timeline-content">
+              <h3>Introductory Internship — Detatec</h3>
+              <div class="meta mono">Sousse, Tunisia</div>
+              <p>
+                Initial exposure to professional IT environments and
+                infrastructure-related tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== EDUCATION ===== -->
+      <section class="section" id="education">
+        <div class="section-head">
+          <span class="ws-number mono">7</span>
+          <h2 class="section-title mono">Education</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="reveal">
+          <div class="edu-item">
+            <h3>Bachelor's Degree in Information Technology</h3>
+            <div class="meta mono">ISET Sfax · 2025 — 2027</div>
+            <p>//</p>
+          </div>
+          <div class="edu-item">
+            <h3>Bachelor's Degree in Information Technology</h3>
+            <div class="meta mono">ISET Mahdia · 2022 — 2025</div>
+            <p>Graduated June 2025.</p>
+            <span class="highlight mono"
+              >◆ Laureate / First-ranked among three graduating classes</span
+            >
+          </div>
+          <div class="edu-item">
+            <h3>Baccalaureate — Computer Science</h3>
+            <div class="meta mono">Lycée Sened, Gafsa · 2022</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CERTIFICATIONS ===== -->
+      <section class="section" id="certifications">
+        <div class="section-head">
+          <span class="ws-number mono">8</span>
+          <h2 class="section-title mono">Certifications &amp; Learning</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="cert-grid reveal">
+          <div class="window">
+            <div class="window-bar">
+              <span class="window-title mono">~/certs</span>
+            </div>
+            <div class="window-body">
+              <div class="cert-placeholder mono">
+                // no certifications listed yet<br />
+                // ready for future additions
+              </div>
+            </div>
+          </div>
+          <div class="window">
+            <div class="window-bar">
+              <span class="window-title mono">~/learning</span>
+            </div>
+            <div class="window-body">
+              <ul class="online-list">
+                <li>Linux Administration</li>
+                <li>Python</li>
+                <li>Ansible</li>
+                <li>Networking</li>
+                <li>Cybersecurity</li>
+                <li>Windows Server</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== GITHUB ===== -->
+      <section class="section" id="github">
+        <div class="section-head">
+          <span class="ws-number mono">9</span>
+          <h2 class="section-title mono">Building in Public</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="window reveal">
+          <div class="window-bar">
+            <span class="window-title mono">~/github</span>
+          </div>
+          <div class="window-body">
+            <p>
+              I use GitHub to document projects, experiments, automation
+              scripts, and infrastructure work.
+            </p>
+            <a
+              href="https://github.com/hosnizaaraoui"
+              target="_blank"
+              rel="noopener"
+              class="btn btn-outline mono"
+              >→ github.com/hosnizaaraoui</a
+            >
+            <div class="repo-grid">
+              <div class="repo-card mono">
+                <h5>COVE</h5>
+                <p>CVE Observation & Vulnerability Explorer</p>
+              </div>
+              <div class="repo-card mono">
+                <h5>STAYZER</h5>
+                <p>ssh trust analyzer</p>
+              </div>
+              <div class="repo-card mono">
+                <h5>PEXA</h5>
+                <p>password expiration auditor</p>
+              </div>
+              <div class="repo-card mono">
+                <h5>OOPS</h5>
+                <p>Operations Optimization & Python Scripts</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PHILOSOPHY ===== -->
+      <section class="section" id="philosophy">
+        <div class="window reveal" style="max-width: 720px; margin: 0 auto">
+          <div class="window-bar">
+            <span class="window-title mono">~/philosophy</span>
+          </div>
+          <div class="window-body philosophy">
+            <h2 class="mono">Learn by Building</h2>
+            <p>
+              I learn infrastructure by building it, breaking it,
+              troubleshooting it, and rebuilding it.
+            </p>
+            <p>
+              My projects and labs are not only demonstrations of finished
+              results; they are part of an ongoing process of understanding how
+              systems work in real environments.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CONTACT ===== -->
+      <section class="section" id="contact">
+        <div class="section-head">
+          <span class="ws-number mono">10</span>
+          <h2 class="section-title mono">Let's Connect</h2>
+          <span class="section-line"></span>
+        </div>
+        <div class="window reveal" style="max-width: 760px; margin: 0 auto">
+          <div class="window-bar">
+            <span class="window-title mono">~/contact</span>
+          </div>
+          <div class="window-body contact-section">
+            <p>
+              I'm always interested in connecting with people working in system
+              administration, networking, infrastructure, automation, and
+              cybersecurity.
+            </p>
+            <div class="contact-links mono">
+              <a
+                href="https://github.com/hosnizaaraoui"
+                target="_blank"
+                rel="noopener"
+                >[github]</a
+              >
+              <a
+                href="https://linkedin.com/in/hosni-zaaraoui"
+                target="_blank"
+                rel="noopener"
+                >[linkedin]</a
+              >
+              <a href="mailto:hosnyzaaraoui@gmail.com">[email]</a>
+            </div>
+            <button
+              class="copy-email mono"
+              id="copyEmail"
+              data-email="hosnyzaaraoui@gmail.com"
+            >
+              📋 hosnyzaaraoui@gmail.com
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== FOOTER ===== -->
+      <footer class="footer">
+        <div class="footer-line mono">
+          ─────────────────────────────────────────
+        </div>
+        <div class="footer-name">Hosni Zaaraoui</div>
+        <div class="footer-role mono">
+          Junior System Administrator <span class="sep">|</span> Networking
+          &amp; Security Enthusiast
+        </div>
+        <div class="footer-links mono">
+          <a
+            href="https://github.com/hosnizaaraoui"
+            target="_blank"
+            rel="noopener"
+            >[github]</a
+          >
+          <a
+            href="https://linkedin.com/in/hosni-zaaraoui"
+            target="_blank"
+            rel="noopener"
+            >[linkedin]</a
+          >
+          <a href="mailto:hosnyzaaraoui@gmail.com">[email]</a>
+        </div>
+        <div class="footer-note mono">© 2026 Hosni Zaaraoui</div>
+      </footer>
+    </main>
+
+    <!-- ===== PROJECT MODAL ===== -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+    >
+      <div class="modal" id="modal">
+        <div class="modal-bar mono">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span
+          ><span class="dot dot-g"></span>
+          <span class="modal-bar-title">project — detail</span>
+          <button class="modal-close mono" id="modalClose" aria-label="Close">
+            [ x ]
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="modalTitle">Project</h2>
+          <div class="modal-status" id="modalStatus"></div>
+          <div id="modalContent"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="data/projects.js"></script>
+    <script src="data/documents.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
