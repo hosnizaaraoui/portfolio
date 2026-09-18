@@ -258,15 +258,17 @@
   /* ---------- THEME TOGGLE ---------- */
   const THEME_KEY = 'hz-theme';
 
-  function toggleTheme() {
-    const next = document.body.classList.contains('light') ? 'dark' : 'light';
-    applyTheme(next);
-    localStorage.setItem(THEME_KEY, next);
-  }
+  const storage = {
+    get(key) {
+      try { return localStorage.getItem(key); }
+      catch (e) { return null; }
+    },
+    set(key, value) {
+      try { localStorage.setItem(key, value); }
+      catch (e) { /* storage unavailable — theme just won't persist */ }
+    }
+  };
 
-
-  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
-  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
   function applyTheme(theme) {
     const isLight = theme === 'light';
     document.body.classList.toggle('light', isLight);
@@ -278,16 +280,18 @@
     if (themeLabel) themeLabel.textContent = isLight ? 'LGT' : 'DRK';
   }
 
-  const stored = localStorage.getItem(THEME_KEY);
-  applyTheme(stored || 'dark');
-
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const next = document.body.classList.contains('light') ? 'dark' : 'light';
-      applyTheme(next);
-      localStorage.setItem(THEME_KEY, next);
-    });
+  function toggleTheme() {
+    const next = document.body.classList.contains('light') ? 'dark' : 'light';
+    applyTheme(next);
+    storage.set(THEME_KEY, next);
   }
+
+  // Bind once per button
+  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
+
+  // Initial theme — read from storage, fall back to dark
+  applyTheme(storage.get(THEME_KEY) || 'dark');
 
   /* ---------- PROJECT MODAL ---------- */
   function openProjectModal(projectId) {
