@@ -1836,6 +1836,38 @@ a:hover {
   }
 }
 
+.theme-pill {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  font-size: 0.72rem;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+}
+.theme-pill:hover,
+.theme-pill:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--surface-3);
+  outline: none;
+}
+.theme-pill:active {
+  transform: scale(0.94);
+}
+
+@media (min-width: 901px) {
+  .theme-pill {
+    display: none;
+  }
+}
 /* =================================================================
    LIGHT THEME
    ================================================================= */

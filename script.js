@@ -190,6 +190,7 @@
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   const themeToggle = document.getElementById('themeToggle');
+  const themeToggleMobile = document.getElementById('themeToggleMobile');
   const themeLabel = document.getElementById('themeLabel');
   const modalOverlay = document.getElementById('modalOverlay');
   const modalClose = document.getElementById('modalClose');
@@ -257,16 +258,24 @@
   /* ---------- THEME TOGGLE ---------- */
   const THEME_KEY = 'hz-theme';
 
+  function toggleTheme() {
+    const next = document.body.classList.contains('light') ? 'dark' : 'light';
+    applyTheme(next);
+    localStorage.setItem(THEME_KEY, next);
+  }
+
+
+  if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
+  if (themeToggleMobile) themeToggleMobile.addEventListener('click', toggleTheme);
   function applyTheme(theme) {
-    if (theme === 'light') {
-      document.body.classList.add('light');
-      if (themeToggle) themeToggle.textContent = '☀️';
-      if (themeLabel) themeLabel.textContent = 'LGT';
-    } else {
-      document.body.classList.remove('light');
-      if (themeToggle) themeToggle.textContent = '🌙';
-      if (themeLabel) themeLabel.textContent = 'DRK';
-    }
+    const isLight = theme === 'light';
+    document.body.classList.toggle('light', isLight);
+
+    const icon = isLight ? '☀️' : '🌙';
+    if (themeToggle) themeToggle.textContent = icon;
+    if (themeToggleMobile) themeToggleMobile.textContent = icon;
+
+    if (themeLabel) themeLabel.textContent = isLight ? 'LGT' : 'DRK';
   }
 
   const stored = localStorage.getItem(THEME_KEY);
