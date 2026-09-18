@@ -70,15 +70,6 @@ window.DOCUMENTS = [
         type: 'report',
         lang: 'fr',
         date: '2025',
-        description: 'File sharing configuration report.',
-        pdf: 'assets/docs/CR_File_Sharing.pdf',
-        thumbnail: 'assets/docs/thumbnails/CR_File_Sharing.png'
-    },
-    {
-        title: 'CR — File Sharing (vF)',
-        type: 'report',
-        lang: 'fr',
-        date: '2025',
         description: 'Final version of the file sharing report.',
         pdf: 'assets/docs/CR_File_Sharing_vF.pdf',
         thumbnail: 'assets/docs/thumbnails/CR_File_Sharing_vF.png'
