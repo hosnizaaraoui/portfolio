@@ -1,7 +1,15 @@
 /* ---------- DOCUMENTS ---------- */
 
 window.DOCUMENTS = [
-
+	{
+    title: 'Deep Dive — /etc/passwd & /etc/shadow',
+    type: 'linkedin',
+    lang: 'en',
+    date: '2026',
+    description: 'Deep dive into Linux account identity, authentication, password management...',
+    pdf: 'assets/docs/passwd-shadow-deep-dive.pdf',
+    thumbnail: 'assets/docs/thumbnails/passwd-shadow-deep-dive.png'
+},
     /* ============================================================
        LINUX WRITEUPS & SERIES
        ============================================================ */
